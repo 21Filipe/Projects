@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços - PetCare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="container mt-5">
+        <h2 class="text-center">Agendar Serviço</h2>
+        <form id="agendamentoForm">
+            <div class="mb-3">
+                <label for="servico" class="form-label">Serviço</label>
+                <select id="servico" class="form-control" required>
+                    <option value="Banho">Banho - R$ 30,00</option>
+                    <option value="Tosa">Tosa - R$ 50,00</option>
+                    <option value="Banho e Tosa">Banho e Tosa - R$ 70,00</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control" id="data" required>
+            </div>
+            <div class="mb-3">
+                <label for="horario" class="form-label">Horário</label>
+                <input type="time" class="form-control" id="horario" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="teleBusca">
+                <label class="form-check-label" for="teleBusca">Adicionar Tele Busca</label>
+            </div>
+            <div class="mb-3" id="cepSection" style="display: none;">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP" maxlength="8">
+                <small class="form-text text-muted">O valor adicional será calculado com base no seu CEP.</small>
+            </div>
+            <div class="mb-3">
+                <p><strong>Valor Total: R$ <span id="valorTotal">0,00</span></strong></p>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar</button>
+        </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Navegação</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="agendamento.html" class="text-dark">Agendamento</a></li>
+                        <li><a href="carrinho.html" class="text-dark">Carrinho</a></li>
+                        <li><a href="login.html" class="text-dark">Login</a></li>
+                        <li><a href="cadastro.html" class="text-dark">Cadastro</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Informações de Contato</h5>
+                    <p>Filipe Teixeira da Silva<br>PUCRS - ADS</p>
+                    <p>Contato: <a href="tel:+5561994267286" class="text-dark">61 99426-7286</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-3 bg-dark text-white">
+            © 2024 Filipe Teixeira da Silva - PUCRS
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
